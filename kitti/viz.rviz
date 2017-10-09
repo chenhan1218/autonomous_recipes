@@ -6,6 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Grid1
+        - /Grid1/Offset1
         - /Map1
       Splitter Ratio: 0.600670993
     Tree Height: 271
@@ -42,11 +44,11 @@ Visualization Manager:
       Name: Grid
       Normal Cell Count: 0
       Offset:
-        X: 0
-        Y: 0
+        X: 120
+        Y: -45
         Z: 0
       Plane: XY
-      Plane Cell Count: 100
+      Plane Cell Count: 240
       Reference Frame: <Fixed Frame>
       Value: true
     - Class: rviz/TF
@@ -179,15 +181,15 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 399.345276
+      Distance: 506.060608
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 144.621552
-        Y: 16.1869869
+        X: 197.573456
+        Y: -29.2665749
         Z: 0
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
