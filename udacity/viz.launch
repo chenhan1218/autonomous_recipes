@@ -1,0 +1,23 @@
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <param name="robot_description"
+    textfile="backpack_3d.urdf" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+
+  <include file="$(find velodyne_driver)/launch/nodelet_manager.launch" />
+
+  <include file="$(find velodyne_pointcloud)/launch/cloud_nodelet.launch">
+    <arg name="calibration"
+         value="$(find velodyne_pointcloud)/params/64e_utexas.yaml"/>
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(env PWD)/viz.rviz" />
+  <arg name="bag_filename" default="/mnt/dataset/udacity/3m.bag" />
+
+  <node pkg="rosbag" type="play" name="player" args="--clock $(arg bag_filename)" />
+
+</launch>
